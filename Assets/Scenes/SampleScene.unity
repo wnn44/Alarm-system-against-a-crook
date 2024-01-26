@@ -284,7 +284,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 988600402}
   - component: {fileID: 988600401}
   - component: {fileID: 988600403}
-  - component: {fileID: 988600404}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -565,18 +564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _thief: {fileID: 327510639}
---- !u!114 &988600404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988600400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d37defb0df045444ea54164353303302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _audioSource: {fileID: 992384439}
 --- !u!1 &992384438
 GameObject:
@@ -607,7 +594,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bdd0a5547275e1f47b99d15a76fa9b6a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
