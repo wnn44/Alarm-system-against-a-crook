@@ -1,22 +1,23 @@
 using UnityEngine;
 
-public class AlarmController : MonoBehaviour
+public class Siren : MonoBehaviour
 {
-    [SerializeField] private GameObject _thief;
     [SerializeField] private AudioSource _audioSource;
 
     private float _deltaVolume = 0.3f;
     private float _maxVolume = 1.0f;
     private float _incrementVolume;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnEnable()
     {
-        AlarmStart();
+        SecurityAlarm.DangerOn += AlarmStart;
+        SecurityAlarm.DangerOff += AlarmStop;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnDisable()
     {
-        AlarmStop();
+        SecurityAlarm.DangerOn -= AlarmStart;
+        SecurityAlarm.DangerOff -= AlarmStop;
     }
 
     private void AlarmStart()
@@ -34,4 +35,5 @@ public class AlarmController : MonoBehaviour
     {
         _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, _maxVolume, _incrementVolume * Time.deltaTime);
     }
+
 }

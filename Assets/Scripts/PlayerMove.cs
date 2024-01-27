@@ -5,7 +5,7 @@ public class PlayerMove : MonoBehaviour
     public float Speed = 10f;
     public float JumpForce = 300f;
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         Movement();
     }

@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5579d8944662a941b7423f201604ddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 3
   JumpForce: 300
 --- !u!212 &327510642
 SpriteRenderer:
@@ -302,7 +302,7 @@ Transform:
   m_GameObject: {fileID: 327510639}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.47, y: -2.64, z: 0}
+  m_LocalPosition: {x: -3.47, y: -2.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1338,6 +1338,7 @@ GameObject:
   - component: {fileID: 922935802}
   - component: {fileID: 922935804}
   - component: {fileID: 922935803}
+  - component: {fileID: 922935805}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -1354,7 +1355,7 @@ Transform:
   m_GameObject: {fileID: 922935801}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.12, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2465,6 +2466,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &922935805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922935801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17099a54cdae97147ab5b52bb320f144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 992384439}
 --- !u!1 &988600400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,7 +2570,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _thief: {fileID: 327510639}
-  _audioSource: {fileID: 992384439}
 --- !u!1 &992384438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,7 +2725,7 @@ Transform:
   m_GameObject: {fileID: 1027017044}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.148, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2759,7 +2772,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
