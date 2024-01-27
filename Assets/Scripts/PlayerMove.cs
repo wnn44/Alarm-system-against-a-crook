@@ -13,7 +13,7 @@ public class PlayerMove : MonoBehaviour
     private void Movement()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        float moveVertical = 0;
 
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
