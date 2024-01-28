@@ -33,7 +33,19 @@ public class Siren : MonoBehaviour
 
     private void Update()
     {
-        _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, _maxVolume, _incrementVolume * Time.deltaTime);
+        AlarmPlay();
     }
 
+    private void AlarmPlay()
+    {
+        if (_incrementVolume != 0)
+        {
+            _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, _maxVolume, _incrementVolume * Time.deltaTime);
+
+            if (_audioSource.volume == 0)
+            {
+                _incrementVolume = 0;
+            }
+        }
+    }
 }

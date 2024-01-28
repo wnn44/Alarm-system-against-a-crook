@@ -10,11 +10,17 @@ public class SecurityAlarm : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DangerOn?.Invoke();
+        if (collision.gameObject == _thief)
+        {
+            DangerOn?.Invoke();
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        DangerOff?.Invoke();
+        if (collision.gameObject == _thief)
+        {
+            DangerOff?.Invoke();
+        }
     }
 }
